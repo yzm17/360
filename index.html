@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/jquery.fullPage.css"/>
+    <link rel="stylesheet" href="css/360拉伸无bug版.css"/>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+</head>
+<body>
+<div id="box">
+    <!--每一个class为section的div都是一屏,section这个类是固定的-->
+    <div class="section  first">
+        <div class="logo"></div>
+        <div class="text">
+            <img src="images/text_1.png" alt=""/>
+            <img src="images/text_2.png" alt=""/>
+            <img src="images/text_3.png" alt=""/>
+            <img src="images/text_4.png" alt=""/>
+            <img src="images/text_5.png" alt=""/>
+            <img src="images/text_6.png" alt=""/>
+            <img src="images/text_7.png" alt=""/>
+            <img src="images/text_8.png" alt=""/>
+        </div>
+        <div class="info1"></div>
+    </div>
+    <div class="section second ">
+        <div class="shield">
+            <img src="images/shield_1.png" alt=""/>
+            <img src="images/shield_2.png" alt=""/>
+            <img src="images/shield_3.png" alt=""/>
+            <img src="images/shield_4.png" alt=""/>
+            <img src="images/shield_5.png" alt=""/>
+            <img src="images/shield_6.png" alt=""/>
+            <img src="images/shield_7.png" alt=""/>
+            <img src="images/shield_8.png" alt=""/>
+            <img src="images/shield_9.png" alt=""/>
+        </div>
+        <div class="info2"></div>
+    </div>
+    <div class="section  third">
+        <div class="info3"></div>
+        <div class="circle"></div>
+        <div class="rocket"></div>
+    </div>
+    <div class="section  fourth ">
+        <div class="search">
+            <div class="input"></div>
+            <div class="key"></div>
+            <div class="result"></div>
+        </div>
+        <div class="info4"></div>
+    </div>
+    <div class="section active five ">
+        <div class="info5"></div>
+        <div class="brower">
+            <div class="line-top"></div>
+            <div class="line-right"></div>
+            <div class="line-bottom"></div>
+            <div class="line-left"></div>
+            <div class="toolbar"></div>
+            <div class="smallBox"></div>
+            <div class="extra"></div>
+            <div class="b-bottom"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    $("#box").fullpage({
+        sectionsColor: ['#0DA5D6', '#2AB561', '#DE8910', '#16BA9D', '#0da5d6'],
+        scrollingSpeed: 500,
+        continuousVertical: true,
+        navigation: true,
+        verticalCentered: false,
+        afterLoad: function (anchorLink, index) {
+            $(".section").eq(index - 1).addClass("current").siblings().removeClass("current");
+        }
+    });
+</script>

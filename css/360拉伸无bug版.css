@@ -1,0 +1,296 @@
+.section{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.first{
+    display: flex;
+    justify-content: space-around;
+}
+.first .logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 251px;
+    height: 186px;
+    margin:-250px 0 0 -130px;
+    background: url("../images/logo.png") no-repeat;
+}
+.first .text{
+    position: absolute;
+    top: 50%;
+}
+.first .text img{
+    margin: 0 35px;
+    opacity: 0;
+}
+.first.current .text img{
+    opacity: 1;
+    margin: 0  5px;
+    transition:all 1s;
+}
+
+.first .info1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 772px;
+    height: 49px;
+    margin: 170px 32px 0 -352px;
+    background: url("../images/info_1.png") no-repeat;
+}
+.second{
+    display: flex;
+    justify-content: space-around;
+}
+.second .shield{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 420px;
+    height: 200px;
+    margin:-236px 550px 0 -550px;
+}
+.second .shield img:nth-child(1) {
+    transform: translate(-50px, 70px) rotate(45deg);
+}
+
+.second .shield img:nth-child(2) {
+    transform: translate(-50px, -70px) rotate(-45deg);
+}
+
+.second .shield img:nth-child(3) {
+    transform: translate(350px, 67px) rotate(145deg);
+}
+
+.second .shield img:nth-child(4) {
+    transform: translate(-65px, 90px) rotate(-145deg);
+}
+
+.second .shield img:nth-child(5) {
+    transform: translate(260px, 20px) rotate(245deg);
+}
+
+.second .shield img:nth-child(6) {
+    transform: translate(-20px, -56px) rotate(65deg);
+}
+
+.second .shield img:nth-child(7) {
+    transform: translate(-99px, 80px) rotate(95deg);
+}
+
+.second .shield img:nth-child(8) {
+    transform: translate(180px, 90px) rotate(-175deg);
+}
+
+.second .shield img:nth-child(9) {
+    transform: translate(-60px, 43px) rotate(-195deg);
+}
+.second .info2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 635px;
+    height: 309px;
+    margin: -150px 50px 0 -80px;
+    background: url("../images/info_2.png") no-repeat;
+}
+.second.current .shield img{
+    transform: translate(0,0) rotate(0deg);
+    transition:all 2s;
+}
+
+.third .info3{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 631px;
+    height: 278px;
+    margin:-140px 0 0 10px;
+    background: url("../images/info_3.png") no-repeat;
+}
+.third .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin:-230px -30px 0 50px;
+    width: 453px;
+    height: 449px;
+    background: url("../images/circle.png") no-repeat;
+}
+.third .rocket {
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    width: 203px;
+    height: 204px;
+    background: url("../images/rocket.png") no-repeat;
+}
+.third.current .rocket{
+    top: 50%;
+    left: 50%;
+    margin: -80px -200px 0 160px;
+    transition:all 1s;
+}
+.fourth .search{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 600px 0 -600px;
+    width: 529px;
+    height: 450px;
+    position: relative;
+}
+.fourth .search .input{
+    position: absolute;
+    top: 0;
+    width: 529px;
+    height: 66px;
+    background: url("../images/search.png") no-repeat;
+    transform: translateX(-150%);
+}
+.fourth.current .search .input{
+    transform: translateX(0);
+    transition: all 1s;
+}
+
+.fourth .search .key {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    width: 99px;
+    height: 22px;
+    background: url("../images/key.png") no-repeat;
+    width: 0;
+}
+.fourth.current .search .key{
+    width: 99px;
+    transition: all 1s 1s steps(5);
+}
+.fourth .search .result{
+    position: absolute;
+    top: 50px;
+    width: 529px;
+    height: 372px;
+    background: url("../images/result.png") no-repeat;
+    height: 0;
+}
+.fourth.current .search .result{
+    height: 372px;
+    transition: all 1s 2.5s;
+}
+.fourth .info4{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -130px  0 0 -30px;
+    width: 612px;
+    height: 299px;
+    background:url("../images/info_4.png")no-repeat;
+}
+.five .info5{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin:-370px 500px 0 -550px;
+    width: 1077px;
+    height: 134px;
+    background: url("../images/info_5.png") no-repeat;
+}
+.five .brower{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin:-200px 400px 0 -500px;
+    width: 1004px;
+    height: 530px;
+    overflow: hidden;
+}
+.five.current .brower{
+    background-color: rgba(255,255,255,.2);
+}
+.five .brower .line-top,
+.five .brower .line-bottom
+{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .8);
+}
+.five .brower .line-top {
+    top: 0;
+    transform: translateX(150%);
+}
+.five .brower .line-bottom{
+    bottom: 0;
+    transform: translateX(-150%);
+}
+.five .brower .line-left,
+.five .brower .line-right
+{
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .8);
+}
+.five .brower .line-left {
+    left: 0;
+    transform: translateY(150%);
+}
+.five .brower .line-right{
+    right: 0;
+    transform: translateY(-150%);
+}
+.five.current .brower div[class^="line"]{
+    transform: translateY(0);
+    transition: all 1.5s;
+}
+.five .toolbar{
+    position: absolute;
+    width: 1004px;
+    height: 79px;
+    background: url("../images/toolbar.png") no-repeat;
+}
+.five .smallBox{
+    position: absolute;
+    top: 28px;
+    left: 78px;
+    width: 910px;
+    height: 28px;
+    border: 0px solid #fff;
+    opacity: .5;
+    width: 0;
+}
+.five.current .smallBox{
+    width: 910px;
+    border: 1px solid #fff;
+    transition:all 1s 1s;
+
+}
+.five .brower .extra{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 394px;
+    height: 29px;
+    opacity: 0;
+    background: url("../images/extra.png")no-repeat;
+}
+.five.current .brower .extra{
+    opacity: 1;
+    transition:all 1s 1s;
+}
+
+.five .brower .b-bottom{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    height: 1px;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, .5);
+}
+.five.current .brower .b-bottom{
+    opacity: 1;
+    transition:all 1s 1s;
+}
